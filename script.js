@@ -29,7 +29,7 @@ function copyToClipboard() {
 
 function reseter(){
     body.style.background = "white";
-    css_property.textContent = "background-image : "+body.style.background + ";"
+    css_property.textContent = "background-color : "+body.style.background + ";"
     color1.value = "#ffffff"
     color2.value = "#ffffff"
 }
