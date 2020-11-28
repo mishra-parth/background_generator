@@ -1,6 +1,7 @@
 color1 = document.getElementsByClassName("color1")[0];
 color2 = document.getElementsByClassName("color2")[0];
 body = document.getElementById("bodyy")
+clip_board = document.getElementsByClassName("clipboard")[0]
 css_property = document.getElementsByClassName("css_property")[0]
 
 function linear() {
@@ -15,5 +16,19 @@ function linear() {
   }
 };
 
+function copyToClipboard() {
+  const str = document.getElementById('myInput').innerText;
+  const el = document.createElement('textarea');
+  el.value = str;
+  el.setAttribute('readonly', '');
+  el.style.position = 'absolute';
+  el.style.left = '-9999px';
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+}
+
 color1.addEventListener("input", linear)
 color2.addEventListener("input", linear)
+clip_board.addEventListener("click", copyToClipboard)
