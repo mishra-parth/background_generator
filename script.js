@@ -25,6 +25,7 @@ function copyToClipboard() {
   el.select();
   document.execCommand('copy');
   document.body.removeChild(el);
+  alert("You have copied the code")
 }
 
 function reseter(){
@@ -32,9 +33,11 @@ function reseter(){
     css_property.textContent = "background-color : "+body.style.background + ";"
     color1.value = "#ffffff"
     color2.value = "#ffffff"
+    body.style.color = "black"
 }
 
 color1.addEventListener("input", linear)
 color2.addEventListener("input", linear)
+css_property.addEventListener("click", copyToClipboard)
 clip_board.addEventListener("click", copyToClipboard)
 reset.addEventListener("click", reseter)
