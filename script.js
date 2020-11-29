@@ -38,12 +38,3 @@ color1.addEventListener("input", linear)
 color2.addEventListener("input", linear)
 clip_board.addEventListener("click", copyToClipboard)
 reset.addEventListener("click", reseter)
-
-
-
-
-
-
-
-
-
